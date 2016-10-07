@@ -26,7 +26,12 @@
               <div class="input-group input-group-lg">
                 <input id="url-field" type="text" class="form-control" placeholder="Paste a link...">
                 <span class="input-group-btn">
-                  <button class="btn btn-shorten" type="button" onclick="function(){window.location = 'google.com'}">SHORTEN</button>
+                  <button class="btn btn-shorten" id="btn-shorten"type="button" onclick="myFunction()">SHORTEN</button>
+                      <script>
+                          function myFunction() {
+                              window.location.href = "https://url-shortener-fcc-hieuvt.herokuapp.com/new/"+document.getElementById('btn-shorten').innerHTML;
+                          }
+                      </script>
                 </span>
               </div>
             </div>
